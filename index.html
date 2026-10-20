@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Hub - Online Learning Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>💻 Code Hub</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#courses">Courses</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <button onclick="showLogin()">Login</button>
+            <button onclick="showRegister()">Register</button>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h2>Welcome to Code Hub</h2>
+        <h3>Learn Coding. Build Your Future.</h3>
+        <p>Learn programming with simple lessons and practical examples.</p>
+        <a href="#courses" class="btn">Explore Courses</a>
+    </section>
+
+    <section id="courses">
+        <h2>Our Courses</h2>
+
+        <div class="course-container">
+            <div class="course">
+                <h3>Java</h3>
+                <p>Learn Java programming from basics.</p>
+                <button onclick="learnCourse('Java')">Start Learning</button>
+            </div>
+
+            <div class="course">
+                <h3>Python</h3>
+                <p>Learn Python with simple examples.</p>
+                <button onclick="learnCourse('Python')">Start Learning</button>
+            </div>
+
+            <div class="course">
+                <h3>C Programming</h3>
+                <p>Understand programming fundamentals.</p>
+                <button onclick="learnCourse('C Programming')">Start Learning</button>
+            </div>
+
+            <div class="course">
+                <h3>C++</h3>
+                <p>Practice object-oriented programming.</p>
+                <button onclick="learnCourse('C++')">Start Learning</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Code Hub</h2>
+        <p>Code Hub is an online learning platform designed to help students learn programming and improve their coding skills.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: codehub@example.com</p>
+    </section>
+
+    <footer>
+        <p>© 2026 Code Hub | Online Learning Platform</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
