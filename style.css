@@ -1,115 +1,515 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f2f5fa;
-    color: #222;
+    background: #f4f7fc;
+    color: #202b45;
 }
 
 header {
-    background: #172554;
+    background: #14213d;
     color: white;
-    padding: 18px;
+    padding: 18px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    gap: 15px;
 }
 
-header h1 {
-    margin: 5px;
+.logo {
+    font-size: 27px;
+    font-weight: bold;
 }
 
 nav {
     display: flex;
-    gap: 8px;
     flex-wrap: wrap;
+    gap: 8px;
+}
+
+nav button {
+    background: transparent;
+    color: white;
+    border: none;
+    padding: 10px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+nav button:hover {
+    background: #2878e5;
 }
 
 button {
-    background: #2563eb;
-    color: white;
-    border: none;
-    padding: 10px 16px;
-    border-radius: 5px;
     cursor: pointer;
-    margin: 4px;
-}
-
-button:hover {
-    background: #1d4ed8;
 }
 
 .hero {
-    text-align: center;
-    padding: 45px 15px;
-    background: #dbeafe;
-}
-
-.hero h2 {
-    font-size: 32px;
-    color: #172554;
-}
-
-main, .about {
-    padding: 25px;
-    text-align: center;
-}
-
-.courses {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 18px;
-    margin-top: 20px;
-}
-
-.course {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px #00000018;
-}
-
-.course h3 {
-    color: #1d4ed8;
-}
-
-#content {
-    padding: 25px;
-    text-align: center;
-}
-
-#content input {
-    padding: 11px;
-    width: 250px;
-    max-width: 90%;
-    margin: 5px;
-}
-
-.lesson {
-    background: white;
-    padding: 18px;
-    margin: 12px auto;
-    max-width: 700px;
-    border-radius: 8px;
-    text-align: left;
-}
-
-pre {
-    background: #172554;
+    min-height: 350px;
+    padding: 60px 8%;
+    background: linear-gradient(120deg, #14213d, #2856a6);
     color: white;
-    padding: 15px;
-    overflow-x: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin: 15px 0;
+}
+
+.hero p {
+    line-height: 1.7;
+    max-width: 600px;
+}
+
+.tagline {
+    color: #80d8ff;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero-icon {
+    font-size: 115px;
+}
+
+.main-btn, .primary-btn {
+    background: #ffb703;
+    color: #14213d;
+    border: none;
+    padding: 13px 24px;
+    margin-top: 22px;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+main {
+    min-height: 400px;
+    padding: 45px 7%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #14213d;
+    font-size: 30px;
+}
+
+.course-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.course-card, .info-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #00000012;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.course-card:hover, .info-card:hover {
+    transform: translateY(-5px);
+}
+
+.course-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.course-card h3 {
+    color: #2356a4;
+    margin-bottom: 12px;
+}
+
+.course-card p, .info-card p {
+    line-height: 1.6;
+    color: #596579;
+}
+
+.course-card button, .primary-btn {
+    background: #245bb5;
+    color: white;
+    border: none;
+    padding: 12px 20px;
     border-radius: 6px;
+    margin-top: 18px;
+}
+
+.course-card button:hover, .primary-btn:hover {
+    background: #14213d;
+}
+
+.content-box {
+    background: white;
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #00000012;
+}
+
+.content-box h2 {
+    color: #245bb5;
+    margin-bottom: 20px;
+}
+
+.content-box p {
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.form-group {
+    margin: 15px 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.form-group input, .form-group textarea, .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd3df;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.form-group textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.lesson-list {
+    margin: 20px 0;
+    padding-left: 25px;
+    line-height: 2;
+}
+
+.quiz-question {
+    padding: 18px;
+    margin: 15px 0;
+    background: #f0f4fa;
+    border-radius: 8px;
+}
+
+.quiz-question label {
+    display: block;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.result {
+    padding: 18px;
+    margin-top: 20px;
+    background: #e8f5e9;
+    border-radius: 8px;
+    line-height: 1.8;
+}
+
+.certificate {
+    background: #fffdf4;
+    border: 10px double #bd933d;
+    padding: 45px 25px;
+    text-align: center;
+    max-width: 850px;
+    margin: 20px auto;
+    color: #263653;
+}
+
+.certificate h1 {
+    font-size: 38px;
+    color: #a77a24;
+    margin: 20px 0;
+}
+
+.certificate h2 {
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+.certificate .student-name {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    color: #1d4d91;
+    font-weight: bold;
+    margin: 22px 0;
+    border-bottom: 2px solid #bd933d;
+    display: inline-block;
+    padding: 8px 25px;
+}
+
+.certificate p {
+    line-height: 1.8;
+    margin: 12px;
+}
+
+.certificate-footer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
 }
 
 footer {
-    text-align: center;
-    padding: 18px;
-    background: #172554;
+    background: #14213d;
     color: white;
+    padding: 30px 15px;
+    text-align: center;
+    line-height: 2;
+}
+
+@media(max-width: 700px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-icon {
+        font-size: 75px;
+    }
+
+    .certificate h1 {
+        font-size: 27px;
+    }
+
+    .certificate .student-name {
+        font-size: 23px;
+    }
+}
+
+@media print {
+    body.printing * {
+        visibility: hidden !important;
+    }
+
+    body.printing .certificate,
+    body.printing .certificate * {
+        visibility: visible !important;
+    }
+
+    body.printing .certificate {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        min-height: 95vh;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    body.printing .print-button {
+        display: none !important;
+    }
+}
+
+ certificate {
+    position: relative;
+    max-width: 1000px;
+    min-height: 620px;
+    margin: 30px auto;
+    padding: 48px 35px;
+    text-align: center;
+    color: #14213d;
+    background: #fffdf5;
+    border: 12px double #c49a36;
+    outline: 3px solid #14213d;
+    outline-offset: -20px;
+    box-shadow: 0 8px 30px #00000020;
+    overflow: hidden;
+}
+
+.certificate::before,
+.certificate::after {
+    content: "✦";
+    position: absolute;
+    color: #c49a36;
+    font-size: 48px;
+}
+
+.certificate::before {
+    top: 22px;
+    left: 28px;
+}
+
+.certificate::after {
+    bottom: 22px;
+    right: 28px;
+}
+
+.certificate-logo {
+    font-size: 42px;
+    color: #14213d;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.certificate-subtitle {
+    color: #9b7627;
+    font-size: 15px;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+.certificate h1 {
+    color: #14213d;
+    font-family: Georgia, serif;
+    font-size: 42px;
+    margin: 25px 0 12px;
+    letter-spacing: 2px;
+}
+
+.certificate-line {
+    width: 65%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #c49a36, transparent);
+    margin: 15px auto;
+}
+
+.certificate-awarded {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #555;
+}
+
+.certificate .student-name {
+    display: inline-block;
+    color: #a77a24;
+    font-family: Georgia, serif;
+    font-size: 34px;
+    font-weight: bold;
+    border-bottom: 2px solid #c49a36;
+    padding: 10px 30px;
+    margin: 20px auto;
+}
+
+.certificate-course {
+    color: #14213d;
+    font-family: Georgia, serif;
+    font-size: 29px;
+    margin: 18px 0;
+}
+
+.certificate-description {
+    max-width: 680px;
+    margin: 15px auto;
+    line-height: 1.8;
+    color: #555;
+    font-size: 16px;
+}
+
+.gold-seal {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin: 22px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(145deg, #f9df85, #bd8a20, #f9df85);
+    color: #14213d;
+    border: 5px double #fff3c5;
+    outline: 2px solid #bd8a20;
+    font-size: 27px;
+}
+
+.gold-seal span {
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.certificate-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.certificate-footer div {
+    min-width: 180px;
+}
+
+.certificate-footer p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.certificate-id {
+    font-size: 12px;
+    color: #777;
     margin-top: 25px;
+}
+
+@media(max-width: 700px) {
+    .certificate {
+        padding: 45px 20px;
+        min-height: auto;
+    }
+
+    .certificate h1 {
+        font-size: 27px;
+    }
+
+    .certificate .student-name {
+        font-size: 23px;
+        padding: 8px;
+    }
+
+    .certificate-course {
+        font-size: 22px;
+    }
+
+    .certificate-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media print {
+    @page {
+        size: A4 landscape;
+        margin: 8mm;
+    }
+
+    body.printing .certificate {
+        width: 100%;
+        max-width: none;
+        min-height: 175mm;
+        margin: 0;
+        box-shadow: none;
+        break-inside: avoid;
+    }
+
+    body.printing .print-button {
+        display: none !important;
+    }
 }
